@@ -18,7 +18,7 @@ func main() {
 	http.HandleFunc("/postkategori", controller.PostKtg)
 	http.HandleFunc("/getkategori", controller.GetKtg)
 
-	http.HandleFunc("/getjoin", controller.Join)
+	http.HandleFunc("/getjoin/", controller.Join)
 
 	fmt.Println("Running Service")
 	if err := http.ListenAndServe(":5000", nil); err != nil {
